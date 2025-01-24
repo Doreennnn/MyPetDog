@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi6eun58iqmvd"]
+
+[ext_resource type="PackedScene" uid="uid://bgfc8afmk8uro" path="res://object/simple_metal_key___free_download.glb" id="1_fnjk1"]
+[ext_resource type="Script" path="res://Scripts/pickup_key.gd" id="2_youb2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ftq68"]
+size = Vector3(1, 1, 0.534302)
+
+[node name="key" type="StaticBody3D"]
+script = ExtResource("2_youb2")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_fnjk1")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.176467, 0, 0, 0, 0.072323, 0, 0, 0, 0.547386, 0, 0, -0.0564816)
+shape = SubResource("BoxShape3D_ftq68")

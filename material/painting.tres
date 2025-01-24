@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dx1v8tivv80nn"]
+
+[ext_resource type="Texture2D" uid="uid://c4xorbdl7ik0l" path="res://picture/fathersondog-removebg-preview (1).png" id="1_suxc2"]
+
+[resource]
+albedo_texture = ExtResource("1_suxc2")

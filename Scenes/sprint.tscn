@@ -1,0 +1,588 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4wev1ygd56a4"]
+
+[ext_resource type="Texture2D" uid="uid://j0eof8ofyn3g" path="res://picture/sprint6-removebg-preview.png" id="1_xkvti"]
+[ext_resource type="Texture2D" uid="uid://g36ltee1t5p7" path="res://picture/爱心2-removebg-preview.png" id="2_ftdfi"]
+[ext_resource type="FontFile" uid="uid://cha0wpk0kk1hq" path="res://material/Creepster-Regular.ttf" id="3_f6od3"]
+[ext_resource type="Texture2D" uid="uid://bbb4f4mox8d2j" path="res://picture/paper.png" id="4_5b7mj"]
+[ext_resource type="Texture2D" uid="uid://c1sklpqp7m5qv" path="res://missionlogo-removebg-preview.png" id="5_gu64x"]
+[ext_resource type="FontFile" uid="uid://bi63hl0ok0b1l" path="res://Creepster-Regular.ttf" id="6_bghyy"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_rp70w"]
+
+[node name="sprint" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprint_slider" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 333.0
+offset_right = 1211.0
+offset_bottom = 566.0
+theme_override_icons/grabber = SubResource("ImageTexture_rp70w")
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="Sprint-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1091, 605)
+rotation = 0.158825
+scale = Vector2(0.203054, 0.198147)
+texture = ExtResource("1_xkvti")
+
+[node name="爱心2-removebg-preview" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 593)
+scale = Vector2(0.344538, 0.254695)
+texture = ExtResource("2_ftdfi")
+
+[node name="interact_text" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.0
+offset_top = 17.0
+offset_right = 86.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_f6od3")
+theme_override_font_sizes/normal_font_size = 35
+text = "[E] Interact"
+
+[node name="paper" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label" type="Label" parent="paper"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -203.0
+offset_right = 471.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "Just now you were dreaming.
+Look around to find your dog!
+I will use messages to help you.
+The sequence of messages will be
+ from 1 to 9!
+"
+
+[node name="Label3" type="Label" parent="paper"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "1
+"
+
+[node name="paper2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label" type="Label" parent="paper2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -171.0
+offset_right = 337.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "Doesn't it seem strange that scalpels and 
+a syringe are here? 
+These should belong to Dad. 
+Let's go to Dad's room to look for clues!"
+metadata/_edit_group_ = true
+
+[node name="Label2" type="Label" parent="paper2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "2
+"
+
+[node name="paper3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label3" type="Label" parent="paper3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "3
+"
+
+[node name="Label" type="Label" parent="paper3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -168.0
+offset_right = 366.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "Keys should be found to open doors.
+The key to Dad's room might be in the 
+living room! "
+metadata/_edit_group_ = true
+
+[node name="paper4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label4" type="Label" parent="paper4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "4
+"
+
+[node name="Label" type="Label" parent="paper4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -147.0
+offset_right = 385.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "Find the key in Dad's room
+to leave the house!"
+metadata/_edit_group_ = true
+
+[node name="paper5" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label" type="Label" parent="paper5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -174.0
+offset_right = 386.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "Can't open the door? 
+The key might be  somewhere in 
+the house!"
+
+[node name="Label5" type="Label" parent="paper5"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "5
+"
+
+[node name="paper6" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label" type="Label" parent="paper6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -198.0
+offset_right = 413.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "Your dad is conducting horrible 
+experiments, turning people into dogs. 
+Your mom has also become a dog! 
+Actually, I am your mom. 
+You need to escape from your dad!"
+metadata/_edit_group_ = true
+
+[node name="Label6" type="Label" parent="paper6"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "6
+"
+
+[node name="paper7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label7" type="Label" parent="paper7"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "9
+"
+
+[node name="Label" type="Label" parent="paper7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -174.0
+offset_right = 401.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "Mom can only help you this far. 
+Now, you need to get out of 
+this maze by yourself.
+Be careful of your dad!"
+metadata/_edit_group_ = true
+
+[node name="paper8" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label" type="Label" parent="paper8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -153.0
+offset_right = 400.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "This is the ring your dad used 
+to propose to me
+"
+metadata/_edit_group_ = true
+
+[node name="Label8" type="Label" parent="paper8"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "7
+"
+
+[node name="paper9" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -264.0
+offset_right = 515.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5b7mj")
+
+[node name="Label" type="Label" parent="paper9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.0
+offset_top = -164.0
+offset_right = 414.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 35
+text = "These are your dad's experimental 
+documents and the list of investors!
+After me, you'll become their 
+next test subject!
+"
+metadata/_edit_group_ = true
+
+[node name="Label9" type="Label" parent="paper9"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -85.0
+offset_right = 350.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.92549, 0, 0.388235, 1)
+theme_override_fonts/font = ExtResource("3_f6od3")
+theme_override_font_sizes/font_size = 40
+text = "8
+"
+
+[node name="Missionlogo-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(56, 49)
+scale = Vector2(0.0955056, 0.105996)
+texture = ExtResource("5_gu64x")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 17.0
+offset_right = 400.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("6_bghyy")
+theme_override_font_sizes/font_size = 20
+text = " turn on your flashlight, 
+ Try to explore the house and escape!"
+alignment = 0

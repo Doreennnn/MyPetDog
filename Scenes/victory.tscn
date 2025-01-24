@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://doevthjop0l7h"]
+
+[ext_resource type="FontFile" uid="uid://cha0wpk0kk1hq" path="res://material/Creepster-Regular.ttf" id="1_vj63m"]
+[ext_resource type="Script" path="res://Scenes/victory.gd" id="1_xhmpr"]
+[ext_resource type="AudioStream" uid="uid://dkjqpn1fl50ax" path="res://Scenes/医院心跳机器声。Heartbeat sound.mp3" id="2_4nhua"]
+[ext_resource type="FontFile" uid="uid://bi63hl0ok0b1l" path="res://Creepster-Regular.ttf" id="2_klp7l"]
+[ext_resource type="AudioStream" uid="uid://2il8r7512803" path="res://Scenes/432hz北歐湖畔靜謐時光，釋放壓力減少煩躁、放鬆平靜身心｜亞蒂絲冥想音樂.mp3" id="3_gbq3d"]
+[ext_resource type="Texture2D" uid="uid://b3w2t812vpuh6" path="res://Screenshot 2025-01-22 161949.png" id="5_ry8k2"]
+
+[node name="Victory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhmpr")
+music_1 = ExtResource("2_4nhua")
+music_2 = ExtResource("3_gbq3d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -398.5
+offset_top = -146.0
+offset_right = 398.5
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_vj63m")
+theme_override_font_sizes/normal_font_size = 30
+text = "i woke up. it was my mom -- she pulled me out of a nightmare that i might have been trapped in forever...
+i've now accepted the truth -- mom is gone. 
+
+while i was unconscious, my father had been arrested.
+memories of what happened still haunted me, but i knew it was time to move on and rebuild my life."
+
+[node name="Paused" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 104.0
+offset_right = 90.0
+offset_bottom = 208.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.286275, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_klp7l")
+theme_override_font_sizes/font_size = 60
+text = "escaped"
+horizontal_alignment = 1
+
+[node name="Paused2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.5
+offset_top = -83.0
+offset_right = 169.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0.286275, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_klp7l")
+theme_override_font_sizes/font_size = 30
+text = "press enter to continue"
+
+[node name="Screenshot2025-01-22161949" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.258824)
+position = Vector2(577, 329)
+scale = Vector2(1.86731, 1.66869)
+texture = ExtResource("5_ry8k2")

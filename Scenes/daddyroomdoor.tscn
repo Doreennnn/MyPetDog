@@ -1,0 +1,126 @@
+[gd_scene load_steps=15 format=3 uid="uid://o1eo01gl2q6a"]
+
+[ext_resource type="Script" path="res://Scripts/door_parent.gd" id="1_6nx8q"]
+[ext_resource type="Script" path="res://Scripts/daddyroomdoor.gd" id="1_fm7qy"]
+[ext_resource type="Material" uid="uid://dscngp6h4qdo7" path="res://material/woodendoor.tres" id="2_oxce4"]
+[ext_resource type="AudioStream" uid="uid://c1ntun7te2lbg" path="res://Scenes/door-1-open.mp3" id="4_miuke"]
+[ext_resource type="AudioStream" uid="uid://dqphcffg0s4i1" path="res://sounds/close-door-sound-247450.mp3" id="5_o0v31"]
+[ext_resource type="AudioStream" uid="uid://bl77p1qus0lau" path="res://sounds/1657022483_355c49fabad7457.mp3" id="6_7wsle"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_co5hw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ignfv"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5dd0b"]
+radial_segments = 16
+
+[sub_resource type="Animation" id="Animation_qpymc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_07cq1"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.00258065, 1.57137, 0.000489203), Vector3(-0.00174533, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ik7px"]
+resource_name = "locked"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.766667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.0349066, 0), Vector3(0, 0.0349066, 0), Vector3(0, 0, 0), Vector3(0, -0.0349066, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8xh24"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fsh4m"]
+_data = {
+"RESET": SubResource("Animation_qpymc"),
+"close": SubResource("Animation_07cq1"),
+"locked": SubResource("Animation_ik7px"),
+"open": SubResource("Animation_8xh24")
+}
+
+[node name="Door" type="Node3D"]
+script = ExtResource("1_6nx8q")
+
+[node name="hinge" type="Node3D" parent="."]
+transform = Transform3D(1.46347, 0, 0, 0, 2.75815, 0, 0, 0, 0.307708, -0.733991, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="hinge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.501543, 0, 0)
+script = ExtResource("1_fm7qy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D"]
+shape = SubResource("BoxShape3D_co5hw")
+
+[node name="door_base" type="MeshInstance3D" parent="hinge/StaticBody3D"]
+material_override = ExtResource("2_oxce4")
+mesh = SubResource("BoxMesh_ignfv")
+
+[node name="handle" type="MeshInstance3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(0.112462, 0, 0, 0, -4.27094e-08, -0.0686337, 0, 0.977076, -3.00007e-09, 0.369602, -0.0413557, -0.0144538)
+mesh = SubResource("CylinderMesh_5dd0b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hinge/StaticBody3D"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_fsh4m")
+}
+
+[node name="open" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(0.683307, 0, 0, 0, 0.362562, 0, 0, 0, 3.24983, 0.0144587, -0.0085724, 0.178329)
+stream = ExtResource("4_miuke")
+max_distance = 10.0
+
+[node name="close" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(0.683307, 0, 0, 0, 0.362562, 0, 0, 0, 3.24983, 0.0144587, -0.0085724, 0.178329)
+stream = ExtResource("5_o0v31")
+max_distance = 10.0
+
+[node name="locked" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(0.683307, 0, 0, 0, 0.362562, 0, 0, 0, 3.24983, 0.0144587, -0.0085724, 0.178329)
+stream = ExtResource("6_7wsle")
+max_distance = 10.0

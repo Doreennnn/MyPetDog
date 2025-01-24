@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://df51caf34gxs"]
+
+[ext_resource type="Script" path="res://Scripts/wall_painting.gd" id="1_xowuo"]
+[ext_resource type="Material" uid="uid://dx1v8tivv80nn" path="res://material/painting.tres" id="2_8qjqq"]
+[ext_resource type="AudioStream" uid="uid://dp561p4majk0i" path="res://sounds/horror-jump-scare-effect-4-250459.mp3" id="3_npl0e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k2nx6"]
+size = Vector3(1.4386, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hrd31"]
+
+[node name="wall_painting" type="StaticBody3D"]
+script = ExtResource("1_xowuo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.00311, 0, 0, 0, 1.00311, 0, 0, 0, 0.475581, 0, 0, 0)
+shape = SubResource("BoxShape3D_k2nx6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_8qjqq")
+mesh = SubResource("QuadMesh_hrd31")
+
+[node name="jumpscare" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_npl0e")
+max_distance = 15.0

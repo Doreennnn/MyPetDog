@@ -1,0 +1,332 @@
+[gd_scene load_steps=15 format=3 uid="uid://di2l3p6nmc8mb"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_qu6pk"]
+[ext_resource type="FontFile" uid="uid://bi63hl0ok0b1l" path="res://Creepster-Regular.ttf" id="2_3x8k3"]
+[ext_resource type="Texture2D" uid="uid://bvylesfsgd2gr" path="res://SettingsBackground.png" id="2_hal36"]
+[ext_resource type="Texture2D" uid="uid://4s6fb1dyd7w3" path="res://灰色.jpg" id="3_b4u7s"]
+[ext_resource type="Script" path="res://audio_options.gd" id="4_td3jv"]
+[ext_resource type="Texture2D" uid="uid://jby27oodjtrg" path="res://keyboard_key_i-removebg-preview.png" id="6_s6755"]
+[ext_resource type="Texture2D" uid="uid://mwx3mh0vkx7o" path="res://Screenshot_2024-11-12_141503-removebg-preview.png" id="7_2wwv3"]
+[ext_resource type="Texture2D" uid="uid://cmk52y1gyfq0y" path="res://Screenshot_2024-11-12_141527-removebg-preview.png" id="8_gxo4j"]
+[ext_resource type="Texture2D" uid="uid://dahe76lsx0rbv" path="res://Scenes/Screenshot_2025-01-22_071033-removebg-preview.png" id="9_cc5b6"]
+[ext_resource type="Texture2D" uid="uid://tvc3xl8pp6cf" path="res://Screenshot_2025-01-22_102157-removebg-preview.png" id="11_me1cc"]
+[ext_resource type="Texture2D" uid="uid://60f24p038lqk" path="res://Scenes/Screenshot_2025-01-22_074202-removebg-preview.png" id="11_ocsh2"]
+[ext_resource type="Texture2D" uid="uid://uqkxp1nhaq8q" path="res://Screenshot_2025-01-22_102244-removebg-preview.png" id="12_qetyg"]
+[ext_resource type="Texture2D" uid="uid://dpwpei6ad1x6j" path="res://Screenshot_2025-01-22_155507-removebg-preview.png" id="13_6pdva"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdguw"]
+
+[node name="pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_qu6pk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_right = 40.0
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="SettingsBackground" type="Sprite2D" parent="."]
+modulate = Color(0.92549, 0.733333, 0.972549, 0.482353)
+self_modulate = Color(1, 1, 1, 0.788235)
+position = Vector2(596, 321)
+scale = Vector2(0.5875, 0.681944)
+texture = ExtResource("2_hal36")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="SettingsBackground"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1250.0
+offset_top = -695.5
+offset_right = -30.0
+offset_bottom = -24.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_b4u7s")
+region_rect = Rect2(0, 67.115, 198.5, 100)
+
+[node name="Paused" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -61.0
+offset_top = 105.0
+offset_right = 62.0
+offset_bottom = 172.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.286275, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 45
+text = "Paused"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 318.0
+offset_right = 480.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "movement"
+
+[node name="Label" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "look around"
+
+[node name="Label" type="Label" parent="Label2/Label"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = -1.0
+offset_right = 364.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "flashlight"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 480.0
+offset_right = 881.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 318.0
+offset_top = -194.0
+offset_right = 498.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 8
+
+[node name="AudioOptions" type="Control" parent="GridContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+script = ExtResource("4_td3jv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/AudioOptions"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = -138.0
+offset_right = 274.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Master" type="Label" parent="GridContainer/AudioOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "Master"
+
+[node name="Master2" type="HSlider" parent="GridContainer/AudioOptions/VBoxContainer"]
+layout_mode = 2
+
+[node name="SFX" type="Label" parent="GridContainer/AudioOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "sfx"
+
+[node name="SFX2" type="HSlider" parent="GridContainer/AudioOptions/VBoxContainer"]
+layout_mode = 2
+
+[node name="Music" type="Label" parent="GridContainer/AudioOptions/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "music"
+
+[node name="Music2" type="HSlider" parent="GridContainer/AudioOptions/VBoxContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="GridContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdguw")
+text = "Resume"
+
+[node name="Quit" type="Button" parent="GridContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdguw")
+text = "quit"
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 761.0
+offset_top = 228.0
+offset_right = 828.0
+offset_bottom = 302.0
+texture = ExtResource("6_s6755")
+region_rect = Rect2(80, 68, 333, 330)
+
+[node name="Label" type="Label" parent="NinePatchRect4"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -2.0
+offset_right = 57.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "F"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 214.0
+offset_right = 452.0
+offset_bottom = 311.0
+texture = ExtResource("7_2wwv3")
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 227.0
+offset_right = 645.0
+offset_bottom = 310.0
+texture = ExtResource("8_gxo4j")
+
+[node name="Screenshot2025-01-22071033-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(430, 430)
+scale = Vector2(0.511765, 0.519231)
+texture = ExtResource("9_cc5b6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 472.0
+offset_right = 471.0
+offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "run"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 478.0
+offset_right = 664.0
+offset_bottom = 581.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = " jump"
+horizontal_alignment = 1
+
+[node name="Screenshot2025-01-22074202-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(760, 439)
+scale = Vector2(0.589286, 0.618812)
+texture = ExtResource("11_ocsh2")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 796.0
+offset_top = 424.0
+offset_right = 836.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "+"
+
+[node name="Screenshot2025-01-22102157-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(337, 426)
+scale = Vector2(0.46831, 0.4675)
+texture = ExtResource("11_me1cc")
+
+[node name="Screenshot2025-01-22102244-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(588, 437)
+scale = Vector2(0.362595, 0.505495)
+texture = ExtResource("12_qetyg")
+
+[node name="Label" type="Label" parent="Screenshot2025-01-22102244-removebg-preview"]
+offset_left = -592.947
+offset_top = -49.4565
+offset_right = -519.947
+offset_bottom = 5.54353
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "or
+"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 159.0
+offset_right = 660.0
+offset_bottom = 273.0
+theme_override_fonts/font = ExtResource("2_3x8k3")
+theme_override_font_sizes/font_size = 30
+text = "[esc]"
+horizontal_alignment = 1
+
+[node name="Screenshot2025-01-22155507-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(846, 440)
+scale = Vector2(0.363637, 0.345679)
+texture = ExtResource("13_6pdva")
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 423.0
+offset_right = 605.0
+offset_bottom = 446.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "space"
+
+[connection signal="mouse_exited" from="GridContainer/AudioOptions/VBoxContainer/Master2" to="GridContainer/AudioOptions" method="_on_master_2_mouse_exited"]
+[connection signal="mouse_exited" from="GridContainer/AudioOptions/VBoxContainer/SFX2" to="GridContainer/AudioOptions" method="_on_sfx_2_mouse_exited"]
+[connection signal="mouse_exited" from="GridContainer/AudioOptions/VBoxContainer/Music2" to="GridContainer/AudioOptions" method="_on_music_2_mouse_exited"]
+[connection signal="pressed" from="GridContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]

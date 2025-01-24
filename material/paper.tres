@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c6wr4aly70n6q"]
+
+[ext_resource type="Texture2D" uid="uid://bc3wr4lywm0yv" path="res://picture/envelopewithred-removebg-preview.png" id="1_kqi5s"]
+
+[resource]
+albedo_texture = ExtResource("1_kqi5s")

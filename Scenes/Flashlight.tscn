@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7c0hb7fmtmo6"]
+
+[ext_resource type="Script" path="res://Scripts/pickup_flashlight.gd" id="1_4l8p7"]
+[ext_resource type="PackedScene" uid="uid://brgpkvybugr5f" path="res://Scenes/deng.tscn" id="2_5ys6p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8go4q"]
+
+[node name="Flashlight" type="StaticBody3D"]
+transform = Transform3D(0.499096, 0, 0, 0, 0.511067, 0, 0, 0, 0.393298, 0, 0, 0)
+script = ExtResource("1_4l8p7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_8go4q")
+
+[node name="deng" parent="." instance=ExtResource("2_5ys6p")]
+transform = Transform3D(0.0318742, 0, 0.412851, 0, 0.80777, 0, -0.730627, 0, 0.018011, -0.427295, -0.548895, 0.485559)
+
+[node name="deng2" parent="." instance=ExtResource("2_5ys6p")]
+transform = Transform3D(0.0318742, 0, 0.412851, 0, 0.80777, 0, -0.730627, 0, 0.018011, -0.427295, -0.548895, 0.485559)

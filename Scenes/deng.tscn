@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://brgpkvybugr5f"]
+
+[ext_resource type="PackedScene" uid="uid://7hqke4t785gi" path="res://softbox_light_base_station.glb" id="1_s2qei"]
+
+[node name="deng" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_s2qei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.901005, 0, 1.30219)
+
+[editable path="Sketchfab_Scene"]

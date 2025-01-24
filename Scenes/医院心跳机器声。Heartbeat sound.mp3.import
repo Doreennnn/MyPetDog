@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkjqpn1fl50ax"
+path="res://.godot/imported/医院心跳机器声。Heartbeat sound.mp3-7533591d4c106f57db010c08c422e021.mp3str"
+
+[deps]
+
+source_file="res://Scenes/医院心跳机器声。Heartbeat sound.mp3"
+dest_files=["res://.godot/imported/医院心跳机器声。Heartbeat sound.mp3-7533591d4c106f57db010c08c422e021.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

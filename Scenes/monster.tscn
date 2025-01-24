@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg5ekimj6qflj"]
+
+[ext_resource type="Script" path="res://Scripts/monster.gd" id="1_puucw"]
+[ext_resource type="AudioStream" uid="uid://cjp8nwqcv8upw" path="res://sounds/0650b934-390b-4aef-9388-9fbd0a76e9df.mp3" id="2_nasrk"]
+[ext_resource type="Texture2D" uid="uid://dgs60fx6gu2v" path="res://picture/Screenshot 2024-12-29 150037.png" id="3_iiybe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8e84"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_og6j8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cddle"]
+albedo_texture = ExtResource("3_iiybe")
+
+[node name="Monster" type="CharacterBody3D" groups=["monster"]]
+script = ExtResource("1_puucw")
+scene_name = "death"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_s8e84")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+
+[node name="jumpscare_camera" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.085, 0.275726, -1.275)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="jumpscare_camera"]
+layers = 16384
+light_color = Color(0.815686, 0.0862745, 0.0980392, 1)
+light_energy = 0.5
+omni_range = 2.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_nasrk")
+autoplay = true
+max_distance = 5.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999766, -0.00576531, 0.0208287, 0.0115082, 0.957777, -0.287281, -0.018293, 0.287453, 0.95762, 0, 0.100569, 0)
+mesh = SubResource("SphereMesh_og6j8")
+surface_material_override/0 = SubResource("StandardMaterial3D_cddle")
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="on_navigation_agent_3d_velocity_computed"]

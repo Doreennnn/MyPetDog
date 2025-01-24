@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0v1jqi7ss8n7"
+path="res://.godot/imported/Dog Bark Sound Effect HD [No Copyright].mp3-ffc76ab34088eefe13904add8a9f9065.mp3str"
+
+[deps]
+
+source_file="res://Scenes/Dog Bark Sound Effect HD [No Copyright].mp3"
+dest_files=["res://.godot/imported/Dog Bark Sound Effect HD [No Copyright].mp3-ffc76ab34088eefe13904add8a9f9065.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

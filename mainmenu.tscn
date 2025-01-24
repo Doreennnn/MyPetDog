@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://sxeekh31ruv1"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_kq2ae"]
+[ext_resource type="FontFile" uid="uid://bi63hl0ok0b1l" path="res://Creepster-Regular.ttf" id="2_5a04y"]
+[ext_resource type="Texture2D" uid="uid://g36ltee1t5p7" path="res://picture/爱心2-removebg-preview.png" id="3_hf720"]
+[ext_resource type="AudioStream" uid="uid://b0v1jqi7ss8n7" path="res://Scenes/Dog Bark Sound Effect HD [No Copyright].mp3" id="3_jk2qj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7cda"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vfyc0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72u1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -5.0
+offset_right = 100.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_kq2ae")
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.952941, 0.776471, 1)
+theme_override_colors/font_outline_color = Color(0.286275, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_5a04y")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_g7cda")
+text = "start"
+
+[node name="bark button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_color = Color(0.917647, 0.952941, 0.776471, 1)
+theme_override_fonts/font = ExtResource("2_5a04y")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_vfyc0")
+text = "🐕"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/bark button"]
+stream = ExtResource("3_jk2qj")
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5a04y")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_l72u1")
+text = "Exit"
+
+[node name="GameName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_right = 314.5
+offset_bottom = 176.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.918606, 0.953142, 0.777194, 1)
+theme_override_colors/font_shadow_color = Color(0.286275, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.990249, 0.884471, 0.77272, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_5a04y")
+theme_override_font_sizes/font_size = 150
+text = "My Pet Dog"
+
+[node name="爱心2-removebg-preview" type="Sprite2D" parent="GameName"]
+position = Vector2(528.5, 99.9375)
+scale = Vector2(0.222689, 0.310153)
+texture = ExtResource("3_hf720")
+
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="VBoxContainer" method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/bark button" to="VBoxContainer" method="_on_bark_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="VBoxContainer" method="_on_exit_button_pressed"]
