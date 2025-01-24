@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t10rht2oa084"
+path="res://.godot/imported/chair_A_wood.obj-6aa706cd85738058409e93d72030cea3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chair_A_wood.obj-6aa706cd85738058409e93d72030cea3.mesh"]
+
+source_file="res://lab/chair_A_wood.obj"
+dest_files=["res://.godot/imported/chair_A_wood.obj-6aa706cd85738058409e93d72030cea3.mesh", "res://.godot/imported/chair_A_wood.obj-6aa706cd85738058409e93d72030cea3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

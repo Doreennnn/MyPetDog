@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xmwiiffa4xte"
+path="res://.godot/imported/pictureframe_large_B.obj-6a40f1cab6617d196a5e096ab73ec8b1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pictureframe_large_B.obj-6a40f1cab6617d196a5e096ab73ec8b1.mesh"]
+
+source_file="res://lab/pictureframe_large_B.obj"
+dest_files=["res://.godot/imported/pictureframe_large_B.obj-6a40f1cab6617d196a5e096ab73ec8b1.mesh", "res://.godot/imported/pictureframe_large_B.obj-6a40f1cab6617d196a5e096ab73ec8b1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

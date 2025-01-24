@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://4axoobrokk4k"
+path.s3tc="res://.godot/imported/computer_terminal_refrigerator_sci_fi_1.png-31cf2fd9a88a36b57a98ad9dc6e40ba0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d78c0003e1d77511b4256804329e0d63"
+}
+
+[deps]
+
+source_file="res://lab/computer_terminal_refrigerator_sci_fi_1.png"
+dest_files=["res://.godot/imported/computer_terminal_refrigerator_sci_fi_1.png-31cf2fd9a88a36b57a98ad9dc6e40ba0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

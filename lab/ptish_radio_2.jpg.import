@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c0sm48lc848xr"
+path.s3tc="res://.godot/imported/ptish_radio_2.jpg-f7c41ddb4b275c2037c446900442af7d.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "558daa7a9abf428babfd837a54c4c3ba"
+}
+
+[deps]
+
+source_file="res://lab/ptish_radio_2.jpg"
+dest_files=["res://.godot/imported/ptish_radio_2.jpg-f7c41ddb4b275c2037c446900442af7d.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://lab/ptish_radio_2.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

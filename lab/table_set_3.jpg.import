@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://wh0xqrf666o0"
+path.s3tc="res://.godot/imported/table_set_3.jpg-0675388cd26bf4d10b5279dc46e5490e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "632983a7ec69a61b6a25c764d63534e4"
+}
+
+[deps]
+
+source_file="res://lab/table_set_3.jpg"
+dest_files=["res://.godot/imported/table_set_3.jpg-0675388cd26bf4d10b5279dc46e5490e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
