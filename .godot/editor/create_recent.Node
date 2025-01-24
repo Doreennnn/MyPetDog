@@ -1,0 +1,15 @@
+AudioStreamPlayer2D
+AudioStreamPlayer3D
+OmniLight3D
+Label
+Button
+CollisionShape3D
+Area3D
+VBoxContainer
+CanvasLayer
+Node3D
+Camera3D
+AnimationPlayer
+MeshInstance3D
+StaticBody3D
+CollisionPolygon3D
